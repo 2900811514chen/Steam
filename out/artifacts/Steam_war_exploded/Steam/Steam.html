@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html class="responsive" lang="zh-cn">
+<head>
+    <!--meta是html中的元标签，其中包含了对应html的相关信息，客户端浏览器或服务器端的程序会根据这些信息进行处理-->
+    <!--content：定义与 http-equiv 或 name 属性相关的元信息-->
+    <!--charset（编码）：这个网页的编码是utf-8，是网页内容的编码，而不是文件本身的，其他类型的编码中文可能会出现乱码-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--device-width:设备宽度;initial-scale:页面首次显示的可视区域的缩放级别-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#171a21">
+    <title>欢迎来到Steam</title>
+    <link rel="shortcut icon" href="/Steam/SteamFiles/img/steam.ico" type="image/x-icon"/><!--网站图标-->
+    <link rel="stylesheet" href="/Steam/SteamFiles/shared_global.css" type="text/css">
+    <link rel="stylesheet" href="./SteamFiles/shared_responsive.css" type="text/css">
+    <link rel="stylesheet" href="./SteamFiles/store.css" type="text/css">
+    <link rel="stylesheet" href="./SteamFiles/home.css" type="text/css">
+    <link rel="stylesheet" href="./SteamFiles/buttons.css" type="text/css">
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script><!--Jquery在线导包-->
+</head>
+
+<body class=" v6 responsive_page">
+<!--主页面-->
+<div class="responsive_page_frame">
+    <div class="responsive_page_content">
+        <!--头部菜单-->
+        <div id="global_header">
+            <div class="content">
+                <!--Logo-->
+                <div class="logo">
+                    <a href="Steam.html">
+                        <img src="SteamFiles/img/globalheader_logo.png" width="176" height="44">
+                    </a>
+                </div>
+                <!--菜单栏-->
+                <div class="supernav_container">
+                    <a class="menuitem supernav" href="Steam.html"
+                       data-tooltip-type="selector" data-tooltip-content=".submenu_store">商店</a>
+                    <!--商店子菜单-->
+                    <div class="supernav_content"
+                         style="position: absolute; z-index: 1500; left: 1px; top: 64px;">
+                        <div class="submenu_store" data-submenuid="store">
+                            <a class="submenuitem" href="https://steamcommunity.com/">主页</a>
+                            <a class="submenuitem"
+                               href="https://store.steampowered.com/explore/?snr=1_4_4__global-header">探索队列</a>
+                            <a class="submenuitem" href="https://steamcommunity.com/my/wishlist/">愿望单</a>
+                            <a class="submenuitem"
+                               href="https://store.steampowered.com/points/shop/?snr=1_4_4__global-header">点数商店</a>
+                            <a class="submenuitem"
+                               href="https://store.steampowered.com/news/?snr=1_4_4__global-header">新闻</a>
+                            <a class="submenuitem"
+                               href="https://store.steampowered.com/stats/?snr=1_4_4__global-header">统计数据</a>
+                        </div>
+                    </div>
+
+                    <a class="menuitem supernav" href="/UnKnown.jsp"
+                       data-tooltip-type="selector" data-tooltip-content=".submenu_community">社区</a>
+                    <!--社区子菜单-->
+                    <div class="supernav_content"
+                         style="position: absolute; z-index: 1500; left: 43px; top: 64px;">
+                        <div class="submenu_community" data-submenuid="community">
+                            <a class="submenuitem" href="https://steamcommunity.com/">主页</a>
+                            <a class="submenuitem" href="https://steamcommunity.com/discussions/">讨论</a>
+                            <a class="submenuitem" href="https://steamcommunity.com/workshop/">创意工坊</a>
+                            <a class="submenuitem" href="https://steamcommunity.com/market/">市场</a>
+                            <a class="submenuitem" href="https://steamcommunity.com/?subsection=broadcasts">实况直播</a>
+                        </div>
+                    </div>
+
+                    <a class="menuitem" href="https://store.steampowered.com/about/?snr=1_4_4__global-header">关于</a>
+                    <a class="menuitem" href="https://help.steampowered.com/zh-cn/">客服</a>
+
+                </div>
+                <!--登录注册-->
+                <div id="global_actions">
+                    <div id="global_action_menu">
+                        <div class="header_installSteam_button">
+                            <a class="header_installSteam_button_content"
+                               href="https://store.steampowered.com/about/?snr=1_4_4__global-header"
+                               hidden="flase">安装 Steam</a>
+                        </div>
+                        <a class="global_action_link" href="/Steam/UserLogin.html">登录</a>
+                        &nbsp;|&nbsp;
+                        <span class="pulldown global_action_link" href="/UnKnown.jsp">语言</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--商店内容及其他-->
+        <div class="responsive_page_template_content">
+            <div class="home_page_body_ctn">
+                <!--商店菜单导航栏-->
+                <div class="home_page_content">
+                    <div class="responsive_store_nav_ctn_spacer">
+                        <div id="store_header">
+                            <div class="content">
+                                <div class="store_nav_area">
+                                    <div class="store_nav_background">
+
+                                        <div class="store_nav">
+                                            <!--您的商店-->
+                                            <div class="tab">
+                                                <span class="pulldown">
+									                <a class="pulldown_desktop" id="foryou_tab"
+                                                       href="https://store.steampowered.com/?snr=1_4_4__12">您的商店</a>
+                                                    <span></span><!--下拉箭头-->
+                                                </span>
+                                            </div>
+                                            <!--商店下拉框内容-->
+                                            <div class="popup_block_new flyout_tab_flyout">
+                                                <div class="popup_body">
+                                                    <a class="popup_menu_item"
+                                                       href="https://store.steampowered.com/?snr=1_4_4__12">主页 </a>
+                                                    <div class="hr"></div>
+                                                    <a class="popup_menu_item"
+                                                       href="https://store.steampowered.com/communityrecommendations/?snr=1_4_4__12">社区推荐</a>
+                                                    <a class="popup_menu_item"
+                                                       href="https://store.steampowered.com/recommended/?snr=1_4_4__12">最近已查看</a>
+                                                    <a class="popup_menu_item"
+                                                       href="https://store.steampowered.com/curators/?snr=1_4_4__12">Steam
+                                                        鉴赏家</a>
+                                                </div>
+                                            </div>
+                                            <!--浏览-->
+                                            <div class="tab" id="genre_tab" data-flyout="genre_flyout"
+                                                 data-flyout-align="left" data-flyout-valign="bottom">
+									                    <span class="pulldown">
+										                    <a class="pulldown_desktop"
+                                                               href="https://store.steampowered.com/games/?snr=1_4_4__12">浏览</a>
+										                    <span></span>
+                                                        </span>
+                                            </div>
+                                            <!--点数商店-->
+                                            <a class="tab"
+                                               href="https://store.steampowered.com/points/?snr=1_4_4__12">
+                                                <span>点数商店</span>
+                                            </a>
+                                            <!--新闻-->
+                                            <a class="tab" href="https://store.steampowered.com/news/?snr=1_4_4__12">
+                                                <span>新闻</span>
+                                            </a>
+                                            <!--Steam实验室-->
+                                            <a class="tab" href="https://store.steampowered.com/labs/?snr=1_4_4__12">
+                                                <span>Steam 实验室</span>
+                                            </a>
+                                            <!--搜索框-->
+                                            <div class="search_area">
+                                                <div id="store_search">
+                                                    <form name="searchForm" id="searchForm" method="get" action="">
+                                                        <div class="search_box">
+                                                            <input class="default" name="searchContent"
+                                                                   id="store_search_nav_term" type="text"
+                                                                   placeholder="搜索商店" size="22px" autocomplete="none">
+                                                            <a href="#" id="store_search_link"
+                                                               onclick="var $Form = $J(this).parents('form'); $Form.submit(); return false;"><img
+                                                                    src="SteamFiles/img/blank.gif"></a>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--侧边导航-->
+                <div class="home_page_gutter">
+                    <div class="home_page_gutter_block">
+                        <div class="gutter_header">
+                            <a href="https://store.steampowered.com/digitalgiftcards/?snr=1_4_4__125"><img
+                                    class="home_page_gutter_giftcard"
+                                    src="https://store.st.dl.pinyuncloud.com/public/images//gift/steamcards_promo_02.png"></a>
+                            礼物卡
+                            <br>
+                        </div>
+                        <div class="gutter_items">
+                            <a class="gutter_giftcard gutter_item"
+                               href="https://store.steampowered.com/digitalgiftcards/?snr=1_4_4__125">现已在 Steam 上推出</a>
+                        </div>
+
+                        <div class="gutter_header">推荐</div>
+                        <div class="gutter_items">
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/recommended/friendactivity/?snr=1_4_4__125"><span
+                                    class="icon friends"></span> 由好友推荐</a>
+                            <a class="gutter_item" href="https://store.steampowered.com/curators/?snr=1_4_4__125"><span
+                                    class="icon curators"></span> 由鉴赏家推荐</a>
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/tag/browse/?snr=1_4_4__125#yours"><span
+                                    class="icon tags"></span> 标签</a>
+                        </div>
+
+                        <div class="gutter_header pad">探索队列</div>
+                        <div class="gutter_items">
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/explore/next/0?snr=1_4_4__125"><span
+                                    class="icon queue"></span> 推荐</a>
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/explore/next/3?snr=1_4_4__125"><span
+                                    class="icon queue_new"></span> 新品</a>
+                        </div>
+
+                        <div class="gutter_header pad">浏览分类</div>
+                        <div class="gutter_items">
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/search/?filter=topsellers&amp;snr=1_4_4__125"><span
+                                    class="icon top_sellers"></span> 热销商品</a>
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/explore/new/?snr=1_4_4__125"><span
+                                    class="icon recent"></span> 新品</a>
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/explore/upcoming/?snr=1_4_4__125"><span
+                                    class="icon upcoming"></span> 即将推出</a>
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/specials?snr=1_4_4__125#tab=TopSellers"><span
+                                    class="icon discounts"></span> 优惠</a>
+                            <a class="gutter_item" href="https://store.steampowered.com/vr/?snr=1_4_4__125"><span
+                                    class="icon vr"></span> 虚拟现实</a>
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/controller/?snr=1_4_4__125"><span
+                                    class="icon controller"></span> 支持控制器</a>
+                        </div>
+
+                        <div class="home_page_gutter_block">
+                            <div class="gutter_header pad">按类型浏览</div>
+
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/genre/Free%20to%20Play/?snr=1_4_4__125">
+                                免费游玩 </a>
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/genre/Early%20Access/?snr=1_4_4__125">
+                                抢先体验 </a>
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/tags/zh-cn/%E4%BC%91%E9%97%B2/?snr=1_4_4__125">
+                                休闲 </a>
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/tags/zh-cn/%E4%BD%93%E8%82%B2/?snr=1_4_4__125">
+                                体育 </a>
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/tags/zh-cn/%E5%86%92%E9%99%A9/?snr=1_4_4__125">
+                                冒险 </a>
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/tags/zh-cn/%E5%8A%A8%E4%BD%9C/?snr=1_4_4__125">
+                                动作 </a>
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/tags/zh-cn/%E5%A4%A7%E5%9E%8B%E5%A4%9A%E4%BA%BA%E5%9C%A8%E7%BA%BF/?snr=1_4_4__125">
+                                大型多人在线 </a>
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/tags/zh-cn/%E6%A8%A1%E6%8B%9F/?snr=1_4_4__125">
+                                模拟 </a>
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/tags/zh-cn/%E7%8B%AC%E7%AB%8B/?snr=1_4_4__125">
+                                独立 </a>
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/tags/zh-cn/%E7%AB%9E%E9%80%9F/?snr=1_4_4__125">
+                                竞速 </a>
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/tags/zh-cn/%E7%AD%96%E7%95%A5/?snr=1_4_4__125">
+                                策略 </a>
+                            <a class="gutter_item"
+                               href="https://store.steampowered.com/tags/zh-cn/%E8%A7%92%E8%89%B2%E6%89%AE%E6%BC%94/?snr=1_4_4__125">
+                                角色扮演 </a>
+                        </div>
+
+                    </div>
+                </div>
+                <!--精选和推荐-->
+                <div class="home_cluster_ctn">
+                    <div class="home_page_content">
+                        <h2>精选和推荐</h2>
+                        <div id="home_maincap_v7" class="carousel_container maincap">
+                            <!--轮播内容-->
+                            <div class="carousel_items">
+                                <a class="store_main_capsule focus"
+                                   href="https://store.steampowered.com/app/1091500/Cyberpunk_2077/?snr=1_4_4__129_5">
+                                    <div class="capsule"
+                                         style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/capsule_616x353_schinese.jpg');">
+                                        <div class="screenshot"
+                                             style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/CyberPunk_2077_01.jpg')"></div>
+                                        <div class="screenshot"
+                                             style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/CyberPunk_2077_02.jpg')"></div>
+                                        <div class="screenshot"
+                                             style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/CyberPunk_2077_03.jpg')"></div>
+                                        <div class="screenshot"
+                                             style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/CyberPunk_2077_04.jpg')"></div>
+                                    </div>
+                                    <div class="info">
+                                        <div class="app_name">
+                                            <div>Cyberpunk 2077</div>
+                                        </div>
+                                        <div class="screenshots">
+                                            <div>
+                                                <div style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/CyberPunk_2077_01.jpg');"></div>
+                                            </div>
+                                            <div>
+                                                <div style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/CyberPunk_2077_02.jpg');"></div>
+                                            </div>
+                                            <div>
+                                                <div style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/CyberPunk_2077_03.jpg');"></div>
+                                            </div>
+                                            <div>
+                                                <div style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/CyberPunk_2077_04.jpg');"></div>
+                                            </div>
+                                        </div>
+                                        <div class="reason">
+                                            <div class="main default">立即预购</div>
+                                            <div class="additional">
+                                                <div>热销商品</div>
+                                            </div>
+                                        </div>
+                                        <div class="discount_block  no_discount discount_block_inline"
+                                             data-price-final="298">
+                                            <div class="discount_prices">
+                                                <div class="discount_final_price">¥ 298</div>
+                                            </div>
+                                        </div>
+                                        <div class="platforms">
+                                            <span class="platform_img win"></span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="store_main_capsule"
+                                   href="../UnKnown.jsp">
+                                    <div class="capsule"
+                                         style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong.jpg');">
+                                        <div class="screenshot"
+                                             style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong_01.jpg')"></div>
+                                        <div class="screenshot"
+                                             style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong_02.jpg')"></div>
+                                        <div class="screenshot"
+                                             style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong_03.jpg')"></div>
+                                        <div class="screenshot"
+                                             style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong_04.jpg')"></div>
+                                    </div>
+
+                                    <div class="info">
+                                        <div class="app_name">
+                                            <div>黑神话 悟空</div>
+                                        </div>
+                                        <div class="screenshots">
+                                            <div>
+                                                <div style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong_01.jpg');"></div>
+                                            </div>
+                                            <div>
+                                                <div style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong_02.jpg');"></div>
+                                            </div>
+                                            <div>
+                                                <div style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong_03.jpg');"></div>
+                                            </div>
+                                            <div>
+                                                <div style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong_04.jpg');"></div>
+                                            </div>
+                                        </div>
+                                        <div class="reason">
+                                            <div class="main default">即将推出</div>
+                                            <div class="additional">
+                                                <div>热销商品</div>
+                                            </div>
+                                        </div>
+                                        <div class="discount_block  no_discount discount_block_inline"
+                                             data-price-final="298">
+                                            <div class="discount_prices">
+                                                <div class="discount_final_price">¥ 298</div>
+                                            </div>
+                                        </div>
+                                        <div class="platforms">
+                                            <span class="platform_img win"></span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="store_main_capsule"
+                                   href="https://store.steampowered.com/app/998940/_The_Invisible_Guardian/">
+                                    <div class="capsule"
+                                         style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian.png');">
+                                        <div class="screenshot"
+                                             style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian_01.png')"></div>
+                                        <div class="screenshot"
+                                             style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian_02.png')"></div>
+                                        <div class="screenshot"
+                                             style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian_03.png')"></div>
+                                        <div class="screenshot"
+                                             style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian_04.png')"></div>
+                                    </div>
+                                    <div class="info">
+                                        <div class="app_name">
+                                            <div>隐形守护者</div>
+                                        </div>
+                                        <div class="screenshots">
+                                            <div>
+                                                <div style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian_01.png');"></div>
+                                            </div>
+                                            <div>
+                                                <div style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian_02.png');"></div>
+                                            </div>
+                                            <div>
+                                                <div style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian_03.png');"></div>
+                                            </div>
+                                            <div>
+                                                <div style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian_04.png');"></div>
+                                            </div>
+                                        </div>
+                                        <div class="reason">
+                                            <div class="main default">现已推出</div>
+                                            <div class="additional">
+                                                <div>热销商品</div>
+                                            </div>
+                                        </div>
+                                        <div class="discount_block  discount_block_inline" data-price-final="29">
+                                            <div class="discount_pct">-50%</div>
+                                            <div class="discount_prices">
+                                                <div class="discount_original_price">¥ 58</div>
+                                                <div class="discount_final_price">¥ 29</div>
+                                            </div>
+                                        </div>
+                                        <div class="platforms">
+                                            <span class="platform_img win"></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--轮播效果的实现-->
+                            <script type="text/javascript">
+                                /*为了防止文档在完全加载（就绪）之前运行 jQuery 代码，如果在文档没有完全加载之前就运行函数，操作可能失败。*/
+                                $(function () {
+                                    //游戏主图片显示子图片
+                                    $(".screenshots>div").hover(/*应该使用.screenshots div div*/
+                                        function () {/*鼠标悬停时触发的函数*/
+                                            var index = $(".screenshots>div").index(this);
+                                            //console.log(index);
+                                            $(".screenshot").eq(index).addClass("focus")
+                                            /*eq()得到一个jq对象，可以使用jq方法*/
+                                        }
+                                        ,
+                                        function () {/*鼠标离开时触发的函数*/
+                                            var index = $(".screenshots>div").index(this);
+                                            $(".screenshot").eq(index).removeClass("focus")
+                                        }
+                                    )
+                                    //游戏介绍之间自动切换
+                                    var timer = null;//定时器返回值，主要用于关闭定时器
+                                    var indexNow = 0;//图片索引
+                                    var capsule = $(".store_main_capsule");//效率更高;游戏个数
+                                    function play() {
+                                        capsule.removeClass("focus")
+                                        capsule.eq(indexNow).addClass("focus")
+                                    }//游戏切换
+
+                                    function thumbsPlay() {
+                                        thumbs.removeClass("focus");
+                                        thumbs.eq(indexNow).addClass("focus");
+                                    }//下标切换
+
+                                    function stop() {
+                                        if (timer!=null){
+                                            clearInterval(timer)
+                                            timer=null;//释放内存
+                                        }
+                                        console.log("timer的值  "+timer);
+                                    }//停止游戏切换
+
+                                    function autoPlay() {
+                                        if (timer==null){
+                                            timer = setInterval(
+                                                function () {
+                                                    indexNow = (indexNow + 1) % capsule.length;
+                                                    play()//第一个游戏默认为focus
+                                                    thumbsPlay();
+                                                }, 2000)//2000ms后切换游戏
+                                        }
+                                    }//执行自动轮播
+
+                                    autoPlay()//调用函数
+                                    //鼠标在容器中停止切换
+                                    var carousel = $(".carousel_container");
+                                    carousel.hover(
+                                        function () {//必须要有外面的function的匿名函数
+                                            stop()
+                                        }
+                                        ,
+                                        function () {
+                                            autoPlay();
+
+                                        }
+                                    )
+                                    //点击按钮切换游戏
+                                    console.log(capsule.length);
+                                    var leftButton = $(".left");//获取按钮
+                                    leftButton.on("click", function () {//为按钮绑定事件
+                                        indexNow = ((indexNow - 1) + capsule.length) % capsule.length;
+                                        play();
+                                        thumbsPlay();
+                                    })
+                                    var rightButton = $(".right");
+                                    rightButton.on("click", function () {
+                                        indexNow = (indexNow + 1) % capsule.length;
+                                        console.log("游戏下标  "+indexNow);
+                                        play();
+                                        thumbsPlay()
+                                    })
+                                    //点击下标切换游戏
+                                    var thumbs = $(".carousel_thumbs>div");
+                                    thumbs.on("click", function () {
+                                        indexNow = $(".carousel_thumbs>div").index(this);
+                                        thumbsPlay();
+                                        play();
+                                    })
+                                })
+                            </script>
+                            <!--轮播下标-->
+                            <div class="carousel_thumbs">
+                                <!--网页加载至此处直接执行代码-->
+                                <script type="text/javascript">
+                                    for (var i = 0; i < $(".store_main_capsule").length; i++) {
+                                        //动态生成下标个数
+                                        if (i == 0) {
+                                            $("<div class='focus'></div>").appendTo(".carousel_thumbs")
+                                        } else
+                                            $("<div class></div>").appendTo(".carousel_thumbs")
+                                    }
+                                </script>
+                            </div>
+                            <div class="arrow left">
+                                <div></div>
+                            </div>
+                            <div class="arrow right">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--游戏分类展览-->
+                <div class="home_ctn tab_container" style="overflow: visible;">
+                    <div class="home_page_content">
+                        <div class="home_leftcol">
+                            <!--选项-->
+                            <div class="home_tabs_row_ctn">
+                                <div class="store_horizontal_minislider_ctn" style="height: 31px;">
+                                    <div class="home_tabs_row store_horizontal_minislider">
+                                        <div id="tab_newreleases_content_trigger"
+                                             onclick="HomeTabSelect( this, 'tab_newreleases_content' );"
+                                             class="home_tab active" data-usability="5">
+                                            <div class="tab_content">新品与热门商品</div>
+                                        </div>
+                                        <div id="tab_topsellers_content_trigger"
+                                             onclick="LoadDelayedImages('home_tabs'); HomeTabSelect( this, 'tab_topsellers_content' );"
+                                             class="home_tab" data-usability="6">
+                                            <div class="tab_content">热销商品</div>
+                                        </div>
+                                        <div id="tab_upcoming_content_trigger"
+                                             onclick="LoadDelayedImages('home_tabs'); HomeTabSelect( this, 'tab_upcoming_content' );"
+                                             class="home_tab" data-usability="7">
+                                            <div class="tab_content">热门即将推出</div>
+                                        </div>
+                                        <div id="tab_specials_content_trigger"
+                                             onclick="LoadDelayedImages('home_tabs'); HomeTabSelect( this, 'tab_specials_content' );"
+                                             class="home_tab" data-usability="8">
+                                            <div class="tab_content">优惠</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--游戏展示-->
+                            <div class="home_tabs_content">
+                                <div class="tab_content" id="tab_newreleases_content" style="display: block;">
+                                    <div class="tab_see_more">
+                                        查看更多：
+                                        <a href="https://store.steampowered.com/explore/new/?snr=1_4_4__tabsmore"
+                                           class="btnv6_white_transparent btn_small_tall">
+                                            <span>新品</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="tab_content" id="tab_topsellers_content" style="display: none;"></div>
+                                <div class="tab_content" id="tab_upcoming_content" style="display: none;"></div>
+                                <div class="tab_content" id="tab_specials_content" style="display: none;"></div>
+                            </div>
+                        </div>
+                        <div class="home_rightcol">
+                            <div id="tab_preview_container">
+
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+                <!--价格低于40的游戏-->
+                <div class="home_ctn">
+                    <div class="home_page_content">
+                        <div class="carousel_container specials_under10">
+                            <h2>低于 ¥ 40
+                                <span class="right">
+                                    <a class="btnv6_white_transparent btn_small_tall btn_uppercase"
+                                       href="https://store.steampowered.com/search/?filter=ut1&amp;category1=998&amp;os=&amp;snr=1_4_4_">
+								<span>低于 ¥ 40</span>
+							        </a>
+
+                                    <a class="btnv6_white_transparent btn_small_tall btn_uppercase"
+                                       href="https://store.steampowered.com/search/?filter=ut2&amp;category1=998&amp;os=&amp;snr=1_4_4_">
+								<span>低于 ¥ 20</span>
+							        </a>
+                                </span>
+                            </h2>
+                            <div class="carousel_items store_capsule_container">
+
+                            </div>
+                            <div class="carousel_thumbs" data-usability="9" data-usability-scroll="100">
+                                <div class="focus"></div>
+                                <div class=""></div>
+                            </div>
+                            <div class="arrow left" data-usability="9">
+                                <div></div>
+                            </div>
+                            <div class="arrow right" data-usability="9">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--页脚-->
+            <div id="footer">
+                <div class="footer_content">
+                    <div class="rule"></div>
+                    <div class="footer_logo">
+                        <a href="http://www.valvesoftware.com/" target="_blank" rel="noreferrer">
+                            <img src="SteamFiles/img/footerLogo_valve_new.png" height="25" width="auto"
+                                 alt="Valve Software"
+                                 border="0"></a>
+                    </div>
+                    <div class="footer_text">
+                        <div>©2020 Valve Corporation。保留所有权利。所有商标均为其在美国及其它国家/地区的各自持有者所有。</div>
+                        <div>所有的价格均已包含增值税（如适用）。&nbsp;&nbsp;
+
+                            <a href="https://store.steampowered.com/privacy_agreement/?snr=1_44_44_" target="_blank"
+                               rel="noreferrer">隐私政策</a>
+                            &nbsp; | &nbsp;
+                            <a href="https://store.steampowered.com/legal/?snr=1_44_44_" target="_blank"
+                               rel="noreferrer">法律信息</a>
+                            &nbsp; | &nbsp;
+                            <a href="https://store.steampowered.com/subscriber_agreement/?snr=1_44_44_" target="_blank"
+                               rel="noreferrer">Steam 订户协议</a>
+                            &nbsp; | &nbsp;
+                            <a href="https://store.steampowered.com/steam_refunds/?snr=1_44_44_" target="_blank"
+                               rel="noreferrer">退款</a>
+                        </div>
+                    </div>
+                    <div class="footer_steam_logo">
+                        <img src="SteamFiles/img/logo_steam_footer.png" alt="Valve Software"
+                             border="0">
+                    </div>
+                    <!--使用float之后要清除-->
+                    <div style="clear: left;"></div>
+                    <!--<br>的像素值为body所设置的字体大小值：Fontsize-->
+                    <br>
+                    <div class="rule"></div>
+                    <div class="valve_links">
+                        <a href="http://www.valvesoftware.com/about.html" target="_blank" rel="noreferrer">关于 Valve</a>
+                        &nbsp;|&nbsp;
+                        <a href="http://www.steampowered.com/steamworks/" target="_blank"
+                           rel="noreferrer">Steamworks</a>
+                        &nbsp;|&nbsp;
+                        <a href="http://www.valvesoftware.com/jobs.html" target="_blank" rel="noreferrer">工作</a>
+                        &nbsp;|&nbsp;
+                        <a href="https://partner.steamgames.com/steamdirect" target="_blank" rel="noreferrer">Steam
+                            分销</a>
+                        &nbsp;|&nbsp;
+                        <a href="https://store.steampowered.com/digitalgiftcards/?snr=1_44_44_" target="_blank"
+                           rel="noreferrer">礼物卡</a>
+                        &nbsp;|&nbsp;
+                        <a href="https://steamcommunity.com/linkfilter/?url=http://www.facebook.com/Steam"
+                           target="_blank" rel="noopener"><img src="SteamFiles/img/ico_facebook.gif"> Steam</a>
+                        &nbsp;|&nbsp;
+                        <a href="http://twitter.com/steam" target="_blank" rel="noreferrer"><img
+                                src="SteamFiles/img/ico_twitter.gif"> @steam</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

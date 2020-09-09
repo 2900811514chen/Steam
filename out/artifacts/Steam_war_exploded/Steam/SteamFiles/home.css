@@ -1,0 +1,547 @@
+.home_page_body_ctn {
+    min-width: 972px;
+    position: relative;
+    overflow: hidden;
+}
+
+.home_page_content {
+    position: relative;
+    width: 940px;
+    padding: 0 234px;
+    margin: 0 auto;
+    transition: padding 0.25s; /*动画执行时间0.25s*/
+}
+
+.home_page_content h2 span.right {
+    float: right;
+    letter-spacing: normal;
+    position: relative;
+    top: -3px;
+}
+
+.home_page_gutter {
+    position: absolute;
+    display: block;
+    left: 24.8px; /*(100vw-960-234*2)/2*/
+    width: 210px;
+    top: 17px;
+    z-index: 2;
+    overflow: hidden;
+    transition: width 0.25s;
+}
+
+.home_page_gutter_block {
+    border: none;
+    background: none;
+    padding-left: 0;
+    width: 210px;
+    margin-bottom: 20px;
+}
+
+.home_page_gutter_block .gutter_header {
+    color: #c6d4df;
+    font-size: 11px;
+    text-transform: uppercase;
+    line-height: 16px;
+    margin: 7px 0;
+}
+
+.home_page_gutter_block .gutter_header.pad {
+    margin-top: 15px;
+}
+
+.home_page_gutter_block .gutter_items {
+    margin: 0 0 14px 0;
+    color: #66c0f4;
+    line-height: 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    font-family: "Motiva Sans", Sans-serif;
+}
+
+.home_page_gutter_block .gutter_item {
+    display: block;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 7px 0;
+    color: #66c0f4;
+    font-weight: normal;
+}
+
+.home_page_gutter_block .gutter_item:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.gutter_item .icon {
+    background-image: url('/Steam/SteamFiles/img/store_menu_icons.png');
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 4px;
+}
+
+.gutter_item .icon.friends {
+    background-position: 0 0;
+}
+
+.gutter_item .icon.curators {
+    background-position: -16px 0;
+}
+
+.gutter_item .icon.tags {
+    background-position: -32px 0;
+}
+
+.gutter_item .icon.queue {
+    background-position: -48px 0;
+}
+
+.gutter_item .icon.queue_new {
+    background-position: -64px 0;
+}
+
+.gutter_item .icon.top_sellers {
+    background-position: -80px 0;
+}
+
+.gutter_item .icon.recent {
+    background-position: -112px 0;
+}
+
+.gutter_item .icon.upcoming {
+    background-position: -128px 0;
+}
+
+.gutter_item .icon.discounts {
+    background-position: -144px 0;
+}
+
+.gutter_item .icon.vr {
+    background-position: -160px 0;
+}
+
+.gutter_item .icon.controller {
+    background-position: -176px 0;
+}
+
+.home_page_gutter_giftcard {
+    max-width: 100%;
+}
+
+.home_cluster_ctn {
+    background: none;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    z-index: auto;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel_container {
+    position: relative;
+}
+
+.carousel_container.maincap {
+    height: 380px;
+    margin-top: 5px;
+}
+
+.carousel_container.maincap .capsule .screenshot {
+    opacity: 0;
+    width: 616px;
+    height: 353px;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 300ms;
+}
+
+.carousel_container.maincap .capsule .screenshot.focus{
+    opacity: 1;
+    transition: none;
+}
+
+.carousel_container .arrow {
+    position: absolute;
+    top: 122px;
+    width: 18px;
+    height: 36px;
+    padding: 36px 11px;
+    cursor: pointer;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.carousel_container .arrow.left {
+    left: -46px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0) 95%);
+}
+
+.carousel_container .left div {
+    background-position-x: 23px;
+}
+
+.carousel_container .arrow.right {
+    right: -46px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0.3) 95%);
+}
+
+.carousel_container .arrow div {
+    width: 23px;
+    height: 36px;
+    background-image: url('/Steam/SteamFiles/img/arrows.png');
+}
+
+.carousel_items {
+    clear: both;
+    height: 353px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 7px 0 #000;
+}
+
+.carousel_container .carousel_items > *.focus {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.carousel_container .carousel_items > * {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 400ms;
+    width: 940px;
+}
+
+.store_main_capsule, .store_main_capsule:hover {
+    background: url('/Steam/SteamFiles/img/background_maincap_2.jpg') no-repeat right;
+    color: #fff;
+    display: flex;
+    position: absolute;
+}
+
+.store_main_capsule .capsule {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+    margin-right: 10px;
+    width: 616px;
+    height: 353px;
+    background: #000 center center;
+    background-size: cover;
+    box-shadow: 0 0 10px 5px #000;
+}
+
+.store_main_capsule .info {
+    flex-shrink: 1;
+}
+
+.store_main_capsule .app_name {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 300;
+    height: 69px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.store_main_capsule .app_name > div {
+    max-height: 62px;
+    overflow: hidden;
+    font-size: 24px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    line-height: 26px;
+}
+
+.store_main_capsule .screenshots {
+    width: 344px;
+    display: inline-block;
+    margin-left: -30px;
+    max-height: 176px;
+    position: relative;
+    font-size: 0; /*消除inline-block引起的约4px的间距*/
+}
+
+.store_main_capsule .screenshots > div {
+    width: 162px;
+    height: 69px;
+    padding: 10px 10px 0 0;
+    display: inline-block;
+}
+
+.store_main_capsule .screenshots > div > div {
+    width: 162px;
+    height: 69px;
+    background-size: cover;
+    background-position: center center;
+    display: inline-block;
+    opacity: 0.6;
+}
+
+.store_main_capsule .screenshots > div > div:hover {
+    opacity: 1;
+}
+
+.store_main_capsule .reason {
+    margin-top: 8px;
+    padding-left: 6px;
+    display: inline-block;
+    width: 298px;
+}
+
+.store_main_capsule .reason .main.default {
+    font-size: 21px;
+    font-weight: 200;
+    min-height: auto;
+}
+
+.store_main_capsule .reason .additional {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.store_main_capsule .reason .additional > div {
+    margin: 3px 0;
+    display: inline-block;
+    line-height: 19px;
+    padding: 0 7px;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+    margin-right: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 3px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 11px;
+}
+
+.store_main_capsule .discount_block {
+    position: absolute;
+    bottom: 10px;
+    left: 632px;
+}
+
+.discount_block_inline {
+    line-height: 15px;
+}
+
+.discount_block .discount_pct{
+    color: #a4d007;
+    background: #4c6b22;
+    display: inline-block;
+}
+
+.discount_block .discount_prices{
+    background: #000000;
+    padding: 0 5px;
+    display: inline-block;
+    vertical-align: bottom;
+    text-align: right;
+}
+
+.discount_block_inline.no_discount .discount_final_price {
+    padding-left: 0;
+}
+
+.discount_block.no_discount .discount_prices {
+    background: none;
+}
+
+.discount_block .discount_original_price {
+    color: #7193a6;
+    display: inline;
+    text-decoration: line-through;/*删除线*/
+    font-size: 11px;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.discount_block_inline {
+    line-height: 15px;
+}
+
+.discount_block_inline .discount_final_price{
+    padding-left: 4px;
+    font-size: 11px;
+    display: inline;
+}
+
+.discount_block .discount_final_price {
+    color: #acdbf5;
+    display: inline;
+}
+
+.store_main_capsule .platforms {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.7;
+}
+
+span.platform_img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+}
+
+span.platform_img.win {
+    background-image: url('/Steam/SteamFiles/img/icon_platform_win.png');
+}
+
+.store_capsule_container {
+    height: 134px;
+    box-shadow: none;
+}
+
+.carousel_thumbs {
+    text-align: center;
+    min-height: 37px;
+    font-size: 0; /*可以消除inline-block引起的约4px间距*/
+    padding-bottom: 4px;
+}
+
+.carousel_thumbs div {
+    display: inline-block;
+    margin: 12px 2px;
+    width: 15px;
+    height: 9px;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+    background-color: hsla(202, 60%, 100%, 0.2);
+    cursor: pointer;
+}
+
+.carousel_thumbs > div:hover {
+    background-color: hsla(202, 60%, 100%, 0.3);
+}
+
+.carousel_thumbs > div.focus {
+    background-color: hsla(202, 60%, 100%, 0.4);
+}
+
+.carousel_container .arrow.left:hover {
+    /*linear-gradient函数创建了渐变*/
+    background: linear-gradient(to right, rgba(171, 218, 244, 0.3) 5%, rgba(171, 218, 244, 0) 95%);
+}
+
+.carousel_container .arrow.right:hover {
+    background: linear-gradient(to right, rgba(171, 218, 244, 0) 5%, rgba(171, 218, 244, 0.3) 95%);
+}
+
+.home_ctn {
+    overflow: hidden;
+}
+
+.home_ctn.tab_container {
+    background: linear-gradient(to bottom, rgba(42, 71, 94, 1.0) 5%, rgba(42, 71, 94, 0.0) 70%); /*渐变色*/
+    padding-top: 1px;
+    margin-top: 60px;
+}
+
+.home_ctn.tab_container > div {
+    margin-top: -31px;
+}
+
+.home_leftcol {
+    position: relative;
+    width: 618px;
+    float: left;
+}
+
+.home_tabs_row_ctn {
+    margin-bottom: 8px;
+}
+
+.specials_under10 {
+    margin: 50px 0;
+}
+
+.specials_under10 .arrow {
+    top: 22%;
+}
+
+.home_tabs_row {
+    position: relative;
+    overflow-x: auto; /*如果溢出框，则应该提供滚动机制。*/
+    white-space: nowrap; /*规定段落中的文本不进行换行*/
+}
+
+.home_tab {
+    display: inline-block;
+    margin-right: 0px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    font-size: 13px;
+    color: #2f89bc;
+    line-height: 24px;
+    cursor: pointer;
+    vertical-align: top;
+    margin-top: 3px;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.home_tab .tab_content {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    font-size: 13px;
+    color: #4f94bc;
+    line-height: 24px;
+    padding: 0 10px;
+    cursor: pointer;
+    vertical-align: top;
+    box-shadow: none;
+}
+
+.home_tab.active {
+    margin-top: 0;
+    box-shadow: none;
+    padding: 1px;
+    background: transparent;
+}
+
+.home_tab.active .tab_content {
+    border: none;
+    line-height: 29px;
+    font-size: 14px;
+    color: #ffffff;
+    text-shadow: -1px -1px rgba(0, 0, 0, 0.25);
+    cursor: default;
+    margin-top: 0;
+    box-shadow: none;
+    background-color: #2a475e;
+}
+
+.tab_see_more {
+    text-align: right;
+}
+
+.home_tab .tab_content:hover {
+    color: #ffffff;
+}
+
+.home_rightcol {
+    width: 308px;
+    float: right;
+}
+
+#tab_preview_container {
+    position: relative;
+    margin-top: 39px;
+    background: linear-gradient(to right, #95bbd4 5%, #859bac 95%);
+    height: auto; /*735px*/
+}

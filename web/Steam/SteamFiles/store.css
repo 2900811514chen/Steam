@@ -1,0 +1,309 @@
+body.v6 {
+    position: relative;
+    min-height: 100%;
+    font-weight: normal;
+    font-family: "Motiva Sans", Sans-serif;
+    color: #c6d4df;
+    font-size: 12px;
+    background: url('/Steam/SteamFiles/img/store_background.png') center top no-repeat #1b2838;
+}
+
+body.v6.login {
+    background: #1b2838;
+}
+
+body.v6 h2 {
+    font-family: "Motiva Sans", Sans-serif, serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 10px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    padding-top: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: #d9dadd;
+}
+
+.responsive_page_template_content {
+    padding-bottom: 155px; /*元素下内边距为155,给页脚预留的空间*/
+    min-height: calc(100vh - 105px); /*最小高度是可视高度-105px：头部菜单的高度*/
+    /*两样属性导致第一次加载页面页脚部分不会直接可看*/
+}
+
+#footer {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16px 0 35px 0;
+    margin: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+body.v6 #footer_spacer {
+    height: 64px;
+}
+
+#footer .small_footer {
+    position: relative;
+    top: auto;
+    bottom: auto;
+}
+
+#footer .footer_content {
+    width: 940px;
+    margin: 0 auto;
+    padding-top: 16px;
+}
+
+#footer .rule {
+    height: 8px;
+    border-top: 1px solid #363c44;
+}
+
+#footer .footer_logo {
+    padding-top: 2px;
+    float: left;
+}
+
+#footer .footer_text {
+    float: left;
+    margin-left: 12px;
+    color: #8F98A0;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+#footer .footer_steam_logo {
+    float: right;
+    padding-top: 2px;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #C6D4DF;
+}
+
+#footer a:hover {
+    color: #ffffff;
+}
+
+#footer .valve_links {
+    margin-top: 8px;
+    float: left;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+    color: #61686D;
+}
+
+#footer .valve_links img {
+    vertical-align: bottom;
+}
+
+html.responsive .responsive_store_nav_ctn_spacer {
+    height: auto;
+}
+
+#store_header {
+    padding-left: 0;
+    padding-right: 0;
+    height: 66px;
+    min-width: 940px;
+    margin-bottom: 16px;
+}
+
+#store_header .content {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+    z-index: 300;
+    height: 66px;
+}
+
+#store_header .store_nav_area {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 24px;
+    height: 49px;
+}
+
+#store_header .store_nav_background {
+    height: 35px;
+    margin: 7px auto;
+    background: rgba(62, 126, 167, 0.8);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+}
+
+#store_header.store_nav {
+    height: 35px;
+}
+
+#store_header .tab {
+    padding: 1px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer; /*定义了鼠标指针放在一个元素边界范围内时所用的光标形状,pointer:是一只手*/
+    border-right: 1px solid rgba(16, 21, 25, 0.3);
+    float: left;
+}
+
+#store_header .tab > span {
+    font-size: 13px;
+    line-height: 34px;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 300;
+    padding: 0 15px;
+}
+
+#store_header .tab > .pulldown {
+    padding-right: 7px;
+    margin-right: 3px;
+    background: none;
+}
+
+a.pulldown_desktop {
+    display: inline;
+    text-decoration: none;
+}
+
+.store_nav .tab > span.pulldown > span {
+    width: 19px;
+    height: 12px;
+    padding: 0;
+    display: inline-block;
+    background: url('/Steam/SteamFiles/img/btn_arrow_down_padded_white.png') no-repeat center;
+    vertical-align: text-bottom;
+    cursor: pointer;
+}
+
+#store_nav .search_area {
+    position: relative;
+}
+
+#store_search {
+    float: right;
+    padding: 3px 4px 2px;
+    height: 30px;
+}
+
+#store_search .search_box {
+    width: 216px;
+    height: 27px;
+    padding: 0px 6px;
+    margin-bottom: 0px;
+    cursor: text;
+    position: relative;
+    background: #316282 none;
+    border-radius: 3px; /*边框添加圆角*/
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
+}
+
+.search_box input {
+    border: none;
+    background-color: transparent;
+    color: #eeeeee;
+    margin-top: 2px;
+    margin-left: 8px;
+    width: 180px;
+    outline: none;
+    line-height: 26px;
+}
+
+.search_box input.default {
+    color: #0e1c25;
+    font-size: 14px;
+    margin-top: 1px;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.search_box input::placeholder {
+    color: #0e1c25;
+}
+
+#store_search_link {
+    position: absolute;
+    right: 2px;
+    top: 0;
+}
+
+a#store_search_link img {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 1px;
+    right: -1px;
+    background-image: url('/Steam/SteamFiles/img/search_ico_btn.png');
+}
+
+a#store_search_link img:hover {
+    background-image: url('/Steam/SteamFiles/img/search_icon_btn_over.png');
+}
+
+.store_nav {
+    height: 35px;
+}
+
+.store_nav .tab:hover {
+    color: #000;
+    background: linear-gradient(to bottom, #e3eaef 5%, #c7d5e0 95%);
+    font-size: 10px;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.25);
+    height: 33px;
+}
+
+/*您的商店下拉出来的内容*/
+.store_nav .tab:hover + .flyout_tab_flyout {
+    opacity: 1;
+    display: block;
+}
+
+.store_nav .tab:hover a {
+    color: black;
+}
+
+#store_search .search_box:hover {
+    border: 1px solid #4c9acc;
+}
+
+.store_horizontal_minislider_ctn {
+    position: relative;
+    overflow: hidden;
+}
+
+/*登录*/
+div {
+    display: block;
+}
+
+body.v6 .page_content {
+    width: 940px;
+    margin: 0 auto;
+}
+
+div.leftcol {
+    width: 616px;
+    float: left;
+}
+
+.checkout_content_box {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+
+div.rightcol {
+    width: 308px;
+    margin-left: 14px;
+    float: right;
+}

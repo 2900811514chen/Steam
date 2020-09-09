@@ -1,0 +1,76 @@
+body.v6 .checkout_content_box h2 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+}
+
+.login_row {
+    margin-bottom: 18px;
+}
+
+.loginbox {
+    min-height: 352px;
+    display: flex; /*弹性布局*/
+    flex-direction: row;
+    padding: 16px 16px 14px;
+}
+
+.loginbox_left {
+    flex: 1;
+    position: relative;
+    min-width: 274px;
+}
+
+.loginbox_content {
+    min-height: 264px;
+    padding-bottom: 16px;
+}
+
+.loginbox_left .btn_ctn {
+    height: 33px;
+}
+
+.text_input{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 3px;
+    box-shadow: 1px 1px 0 #45556c;
+    width: 500px;
+    padding: 5px;
+    margin: 4px 0;
+    font-size: 16px;
+    line-height: 21px;
+    max-width: calc( 100% - 12px );
+}
+
+.loginbox_sep {
+    flex: 0;
+    border-left: 1px solid #264959;
+    width: 2px;
+    height: 210px;
+    margin: 0 16px;
+}
+
+.block {
+    margin: 0px;
+    background: none;
+}
+.block_content.block_content_inner.login {
+    min-height: 364px;
+}
+.block_content_inner {
+    padding: 16px 2px 4px 16px;
+    background-color: rgba(0,0,0,0.2);
+}
+.block_content {
+    border: none;
+}
+
+ul#why_list {
+    list-style: square inside;
+    line-height: 22px;
+}

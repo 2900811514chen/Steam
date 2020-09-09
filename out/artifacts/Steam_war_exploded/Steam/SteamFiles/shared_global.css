@@ -1,0 +1,196 @@
+div#global_header {
+    background: #171a21 center top;
+    min-width: 940px; /*属性设置元素的最小宽度。*/
+    font-family: "Motiva Sans", Sans-serif; /*San-serif是一种通用字体，防止调用的字体无效*/
+    font-weight: normal; /* normal */
+    font-size: 14px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+div#global_header .content {
+    background: #171a21;
+    position: relative;
+    width: 940px; /*确立了头部菜单栏位940px*/
+    height: 104px;
+    margin: 0px auto; /*布局居中效果*/
+    z-index: 402;
+}
+
+div#global_header .logo {
+    float: left;
+    padding-top: 30px;
+    margin-right: 40px;
+    width: 176px;
+    height: 44px;
+}
+
+div#global_actions {
+    position: absolute;
+    right: 0px;
+    top: 6px; /*不知为何不对，只能强行改变位置*/
+    height: 21px;
+    line-height: 21px;
+    color: #b8b6b4;
+    font-size: 11px;
+    z-index: 401;
+    padding: 0 4px;
+    margin-left: 3px;
+}
+
+div#global_actions #global_action_menu {
+    line-height: 24px;
+    vertical-align: top; /*设置元素的垂直对齐方式。*/
+    display: inline-block; /*不独占一行的块级元素*/
+}
+
+div#global_actions a.global_action_link {
+    display: inline-block;
+    text-decoration: none; /*<a>标签自带下划线，这里用无文本修饰*/
+    padding: 0 4px;
+    color: #b8b6b4;
+}
+
+div#global_actions .header_installSteam_button {
+    background-color: #5c7e10;
+    display: inline-block;
+    position: relative;
+    height: 24px;
+    line-height: 24px;
+    margin-right: 3px;
+}
+
+.header_installSteam_button_content {
+    display: inline-block;
+    padding-left: 35px;
+    padding-right: 9px;
+    background: url('/Steam/SteamFiles/img/btn_header_installsteam_download.png') no-repeat 10px 5px;
+    text-decoration: none;
+    color: #e5e4dc;
+    font-weight: normal;
+}
+
+.pulldown {
+    padding-left: 5px;
+    padding-right: 18px;
+    background: url('/Steam/SteamFiles/img/btn_arrow_down_padded.png') no-repeat right center;
+
+    color: #b8b6b4;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div#global_actions .global_action_link:hover, div#global_actions .header_installSteam_button_content:hover:hover {
+    color: #ffffff; /*放上鼠标会改变颜色*/
+}
+
+#global_header .supernav_container {
+    position: absolute;
+    left: 200px;
+}
+
+#global_header .menuitem {
+    float: left;
+    display: block;
+    position: relative;
+    padding: 45px 7px 7px;
+    text-decoration: none;
+    color: #b8b6b4;
+    line-height: 16px;
+    font-size: 14px;
+    text-transform: uppercase; /*控制文本大小写*/
+}
+
+.supernav_content {
+    max-width: 132px;
+    background: url("/Steam/SteamFiles/img/dd_web.jpg");
+    padding: 5px 15px 10px 15px;
+    box-shadow: 3px 3px 5px -3px #000;
+    text-align: left;
+    z-index: 500;
+    background: #171a21;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.supernav_content:hover {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.supernav {
+}
+
+.supernav:hover + .supernav_content { /*hover兄弟选择器只对相邻的元素起作用！！！*/
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#global_header .submenuitem {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #b8b6b4;
+    padding: 6px 10px 6px 0;
+}
+
+#global_header .menuitem:hover, #global_header .submenuitem:hover {
+    color: #ffffff;
+}
+
+.popup_block_new {
+    z-index: 200;
+    position: absolute;
+    box-shadow: 0 0 12px #000000;
+}
+
+.flyout_tab_flyout{
+    visibility: visible;
+    top: 42px;
+    left: 0px;
+    display: none;
+    opacity: 0;
+}
+
+.flyout_tab_flyout:hover{
+    display: block;
+    opacity: 1;
+}
+
+.popup_block_new .popup_body{
+    background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);
+    padding: 8px 5px 8px 5px;
+    border: none;
+    position: relative;
+}
+
+.popup_body .hr{
+    margin: 5px 10px 5px 10px;
+    background-color: #fff;
+    height: 1px;
+}
+
+.popup_menu_item{
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+
+    display: block;
+    padding: 5px 12px;
+    text-transform: none;
+    font-family: Motiva Sans, Arial, Helvectica, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: normal;
+    text-align: left;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.popup_menu_item:hover{
+    color: #fff;
+    background-color: #212d3d;
+}
