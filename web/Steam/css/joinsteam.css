@@ -1,0 +1,136 @@
+body.v6.joinsteam {
+    color: #E9E9E9;
+    background: #18181D;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+}
+
+/*伪::scrollbar元素*/
+::-webkit-scrollbar {
+    width: 15px; /*对滚动条进行设置*/
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #7D7D7D;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #1D1D1D;
+}
+
+.joinsteam_header_ctn {
+    margin-bottom: 10px;
+}
+
+.joinsteam .steam .checkout_content_box {
+    background: url('/Steam/img/joinSteam/steam_logo.svg') no-repeat;
+    background-position-x: -100px;
+    background-position-y: -50px;
+    background-size: contain;
+}
+
+.joinsteam .form_row {
+    margin: 15px 0;
+}
+
+.joinsteam label {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+#create_account input, #create_account select {
+    max-width: 300px;
+    background: #32353C;
+    border-radius: 3px;
+    color: #E9E9E9;
+    padding: 8px 6px;
+    display: block;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    transition: border ease-in-out .5s;
+
+    font-size: 16px;
+    line-height: 21px;
+    margin: 3px 0 4px 0;
+}
+
+.joinsteam .form_note {
+    color: #B3B3B3;
+}
+
+.reenter_row {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.joinsteam .join_form .rule {
+    border: 1px solid #363636;
+    margin: 0;
+}
+
+.joinsteam #instructions {
+    color: #E9E9E9;
+}
+
+.joinsteam p {
+    color: #B3B3B3;
+    font-size: 14px;
+}
+.checkout_content_box a {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+.checkout_content_box a:hover
+{
+    color: #67c1f5;
+}
+
+#create_account input[type="checkbox"] {
+    display: inline;
+    width: 18px;
+    height: 18px;
+    background: #32353C;
+    margin: 0;
+}
+
+.joinsteam .ssa_box {
+    background-color: #121214;
+    color: #E9E9E9;
+    padding: 15px;
+    border: none;
+    height: 337px;
+    overflow: auto; /*超过指定高度生成滚动条*/
+    line-height: 15px;
+}
+
+.joinsteam #ssa_agree {
+    margin-top: 30px;
+}
+.joinsteam #ssa_agree label {
+    font-size: 14px;
+    text-transform: none;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.joinsteam #priv_and_sub {
+    margin-top: 25px;
+}
+
+.joinsteam #createAccountButton {
+    float: right;
+}
+
+.joinsteam #privacy_link {
+    margin-top: 15px;
+    padding-top: 15px;
+}
+.joinsteam .btn_medium span {
+    padding: 4px 30px;
+}
+
+.block_content_inner {
+    padding: 8px;
+    background: #18181D;
+}

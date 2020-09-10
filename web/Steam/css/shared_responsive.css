@@ -26,3 +26,7 @@ body.overflow_hidden .responsive_page_frame {
     margin: 0px; /*页面的内容的内边距为0，让元素填满整个窗口*/
     pading: 0px;
 }
+
+html.responsive .responsive_page_frame.with_header div.responsive_page_content {
+    padding-top: 62px;	/* the header overlaps this area */
+}

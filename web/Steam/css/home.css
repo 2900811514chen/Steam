@@ -76,7 +76,7 @@
 }
 
 .gutter_item .icon {
-    background-image: url('/Steam/SteamFiles/img/store_menu_icons.png');
+    background-image: url('/Steam/img/store_menu_icons.png');
     width: 16px;
     height: 16px;
     display: inline-block;
@@ -197,7 +197,7 @@
 .carousel_container .arrow div {
     width: 23px;
     height: 36px;
-    background-image: url('/Steam/SteamFiles/img/arrows.png');
+    background-image: url('/Steam/img/arrows.png');
 }
 
 .carousel_items {
@@ -221,7 +221,7 @@
 }
 
 .store_main_capsule, .store_main_capsule:hover {
-    background: url('/Steam/SteamFiles/img/background_maincap_2.jpg') no-repeat right;
+    background: url('/Steam/img/background_maincap_2.jpg') no-repeat right;
     color: #fff;
     display: flex;
     position: absolute;
@@ -398,7 +398,7 @@ span.platform_img {
 }
 
 span.platform_img.win {
-    background-image: url('/Steam/SteamFiles/img/icon_platform_win.png');
+    background-image: url('/Steam/img/icon_platform_win.png');
 }
 
 .store_capsule_container {

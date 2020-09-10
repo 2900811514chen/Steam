@@ -9,14 +9,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="#171a21">
     <title>欢迎来到Steam</title>
-    <link rel="shortcut icon" href="/Steam/SteamFiles/img/steam.ico" type="image/x-icon"/><!--网站图标-->
-    <link rel="stylesheet" href="/Steam/SteamFiles/shared_global.css" type="text/css">
-    <link rel="stylesheet" href="./SteamFiles/shared_responsive.css" type="text/css">
-    <link rel="stylesheet" href="./SteamFiles/store.css" type="text/css">
-    <link rel="stylesheet" href="./SteamFiles/home.css" type="text/css">
-    <link rel="stylesheet" href="./SteamFiles/buttons.css" type="text/css">
+    <link rel="shortcut icon" href="/Steam/img/steam.ico" type="image/x-icon"/><!--网站图标-->
+    <link rel="stylesheet" href="/Steam/css/shared_global.css" type="text/css">
+    <link rel="stylesheet" href="css/shared_responsive.css" type="text/css">
+    <link rel="stylesheet" href="css/store.css" type="text/css">
+    <link rel="stylesheet" href="css/home.css" type="text/css">
+    <link rel="stylesheet" href="css/buttons.css" type="text/css">
 
-    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script><!--Jquery在线导包-->
+    <script src="../js/jquery-3.5.1.js"></script><!--本地导包，不建议放在WEB-INF/lib下面-->
+
+    <!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>&lt;!&ndash;Jquery在线导包&ndash;&gt;-->
+
 </head>
 
 <body class=" v6 responsive_page">
@@ -29,7 +32,7 @@
                 <!--Logo-->
                 <div class="logo">
                     <a href="Steam.html">
-                        <img src="SteamFiles/img/globalheader_logo.png" width="176" height="44">
+                        <img src="img/globalheader_logo.png" width="176" height="44">
                     </a>
                 </div>
                 <!--菜单栏-->
@@ -153,7 +156,7 @@
                                                                    placeholder="搜索商店" size="22px" autocomplete="none">
                                                             <a href="#" id="store_search_link"
                                                                onclick="var $Form = $J(this).parents('form'); $Form.submit(); return false;"><img
-                                                                    src="SteamFiles/img/blank.gif"></a>
+                                                                    src="img/blank.gif"></a>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -277,15 +280,15 @@
                                 <a class="store_main_capsule focus"
                                    href="https://store.steampowered.com/app/1091500/Cyberpunk_2077/?snr=1_4_4__129_5">
                                     <div class="capsule"
-                                         style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/capsule_616x353_schinese.jpg');">
+                                         style="background-image: url('/Steam/apps/CyberPunk_2077/capsule_616x353_schinese.jpg');">
                                         <div class="screenshot"
-                                             style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/CyberPunk_2077_01.jpg')"></div>
+                                             style="background-image: url('/Steam/apps/CyberPunk_2077/CyberPunk_2077_01.jpg')"></div>
                                         <div class="screenshot"
-                                             style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/CyberPunk_2077_02.jpg')"></div>
+                                             style="background-image: url('/Steam/apps/CyberPunk_2077/CyberPunk_2077_02.jpg')"></div>
                                         <div class="screenshot"
-                                             style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/CyberPunk_2077_03.jpg')"></div>
+                                             style="background-image: url('/Steam/apps/CyberPunk_2077/CyberPunk_2077_03.jpg')"></div>
                                         <div class="screenshot"
-                                             style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/CyberPunk_2077_04.jpg')"></div>
+                                             style="background-image: url('/Steam/apps/CyberPunk_2077/CyberPunk_2077_04.jpg')"></div>
                                     </div>
                                     <div class="info">
                                         <div class="app_name">
@@ -293,16 +296,16 @@
                                         </div>
                                         <div class="screenshots">
                                             <div>
-                                                <div style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/CyberPunk_2077_01.jpg');"></div>
+                                                <div style="background-image: url('/Steam/apps/CyberPunk_2077/CyberPunk_2077_01.jpg');"></div>
                                             </div>
                                             <div>
-                                                <div style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/CyberPunk_2077_02.jpg');"></div>
+                                                <div style="background-image: url('/Steam/apps/CyberPunk_2077/CyberPunk_2077_02.jpg');"></div>
                                             </div>
                                             <div>
-                                                <div style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/CyberPunk_2077_03.jpg');"></div>
+                                                <div style="background-image: url('/Steam/apps/CyberPunk_2077/CyberPunk_2077_03.jpg');"></div>
                                             </div>
                                             <div>
-                                                <div style="background-image: url('/Steam/SteamFiles/apps/CyberPunk_2077/CyberPunk_2077_04.jpg');"></div>
+                                                <div style="background-image: url('/Steam/apps/CyberPunk_2077/CyberPunk_2077_04.jpg');"></div>
                                             </div>
                                         </div>
                                         <div class="reason">
@@ -326,15 +329,15 @@
                                 <a class="store_main_capsule"
                                    href="../UnKnown.jsp">
                                     <div class="capsule"
-                                         style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong.jpg');">
+                                         style="background-image: url('/Steam/apps/黑神话悟空/BM_Wukong.jpg');">
                                         <div class="screenshot"
-                                             style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong_01.jpg')"></div>
+                                             style="background-image: url('/Steam/apps/黑神话悟空/BM_Wukong_01.jpg')"></div>
                                         <div class="screenshot"
-                                             style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong_02.jpg')"></div>
+                                             style="background-image: url('/Steam/apps/黑神话悟空/BM_Wukong_02.jpg')"></div>
                                         <div class="screenshot"
-                                             style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong_03.jpg')"></div>
+                                             style="background-image: url('/Steam/apps/黑神话悟空/BM_Wukong_03.jpg')"></div>
                                         <div class="screenshot"
-                                             style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong_04.jpg')"></div>
+                                             style="background-image: url('/Steam/apps/黑神话悟空/BM_Wukong_04.jpg')"></div>
                                     </div>
 
                                     <div class="info">
@@ -343,16 +346,16 @@
                                         </div>
                                         <div class="screenshots">
                                             <div>
-                                                <div style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong_01.jpg');"></div>
+                                                <div style="background-image: url('/Steam/apps/黑神话悟空/BM_Wukong_01.jpg');"></div>
                                             </div>
                                             <div>
-                                                <div style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong_02.jpg');"></div>
+                                                <div style="background-image: url('/Steam/apps/黑神话悟空/BM_Wukong_02.jpg');"></div>
                                             </div>
                                             <div>
-                                                <div style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong_03.jpg');"></div>
+                                                <div style="background-image: url('/Steam/apps/黑神话悟空/BM_Wukong_03.jpg');"></div>
                                             </div>
                                             <div>
-                                                <div style="background-image: url('/Steam/SteamFiles/apps/黑神话悟空/BM_Wukong_04.jpg');"></div>
+                                                <div style="background-image: url('/Steam/apps/黑神话悟空/BM_Wukong_04.jpg');"></div>
                                             </div>
                                         </div>
                                         <div class="reason">
@@ -376,15 +379,15 @@
                                 <a class="store_main_capsule"
                                    href="https://store.steampowered.com/app/998940/_The_Invisible_Guardian/">
                                     <div class="capsule"
-                                         style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian.png');">
+                                         style="background-image: url('/Steam/apps/隐形守护者/The_Invisible_Guardian.png');">
                                         <div class="screenshot"
-                                             style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian_01.png')"></div>
+                                             style="background-image: url('/Steam/apps/隐形守护者/The_Invisible_Guardian_01.png')"></div>
                                         <div class="screenshot"
-                                             style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian_02.png')"></div>
+                                             style="background-image: url('/Steam/apps/隐形守护者/The_Invisible_Guardian_02.png')"></div>
                                         <div class="screenshot"
-                                             style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian_03.png')"></div>
+                                             style="background-image: url('/Steam/apps/隐形守护者/The_Invisible_Guardian_03.png')"></div>
                                         <div class="screenshot"
-                                             style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian_04.png')"></div>
+                                             style="background-image: url('/Steam/apps/隐形守护者/The_Invisible_Guardian_04.png')"></div>
                                     </div>
                                     <div class="info">
                                         <div class="app_name">
@@ -392,16 +395,16 @@
                                         </div>
                                         <div class="screenshots">
                                             <div>
-                                                <div style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian_01.png');"></div>
+                                                <div style="background-image: url('/Steam/apps/隐形守护者/The_Invisible_Guardian_01.png');"></div>
                                             </div>
                                             <div>
-                                                <div style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian_02.png');"></div>
+                                                <div style="background-image: url('/Steam/apps/隐形守护者/The_Invisible_Guardian_02.png');"></div>
                                             </div>
                                             <div>
-                                                <div style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian_03.png');"></div>
+                                                <div style="background-image: url('/Steam/apps/隐形守护者/The_Invisible_Guardian_03.png');"></div>
                                             </div>
                                             <div>
-                                                <div style="background-image: url('/Steam/SteamFiles/apps/隐形守护者/The_Invisible_Guardian_04.png');"></div>
+                                                <div style="background-image: url('/Steam/apps/隐形守护者/The_Invisible_Guardian_04.png');"></div>
                                             </div>
                                         </div>
                                         <div class="reason">
@@ -628,7 +631,7 @@
                     <div class="rule"></div>
                     <div class="footer_logo">
                         <a href="http://www.valvesoftware.com/" target="_blank" rel="noreferrer">
-                            <img src="SteamFiles/img/footerLogo_valve_new.png" height="25" width="auto"
+                            <img src="img/footerLogo_valve_new.png" height="25" width="auto"
                                  alt="Valve Software"
                                  border="0"></a>
                     </div>
@@ -650,7 +653,7 @@
                         </div>
                     </div>
                     <div class="footer_steam_logo">
-                        <img src="SteamFiles/img/logo_steam_footer.png" alt="Valve Software"
+                        <img src="img/logo_steam_footer.png" alt="Valve Software"
                              border="0">
                     </div>
                     <!--使用float之后要清除-->
@@ -673,10 +676,10 @@
                            rel="noreferrer">礼物卡</a>
                         &nbsp;|&nbsp;
                         <a href="https://steamcommunity.com/linkfilter/?url=http://www.facebook.com/Steam"
-                           target="_blank" rel="noopener"><img src="SteamFiles/img/ico_facebook.gif"> Steam</a>
+                           target="_blank" rel="noopener"><img src="img/ico_facebook.gif"> Steam</a>
                         &nbsp;|&nbsp;
                         <a href="http://twitter.com/steam" target="_blank" rel="noreferrer"><img
-                                src="SteamFiles/img/ico_twitter.gif"> @steam</a>
+                                src="img/ico_twitter.gif"> @steam</a>
                     </div>
                 </div>
             </div>

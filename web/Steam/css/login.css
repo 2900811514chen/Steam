@@ -74,3 +74,44 @@ ul#why_list {
     list-style: square inside;
     line-height: 22px;
 }
+
+/*register*/
+.join_form {
+    padding: 20px 16px;
+    position: relative;
+}
+
+.game_name {
+    position: relative;
+    font-size: 30px;
+    color: #d6d7d8;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.form_area {
+    float: left;
+    width: 212px;
+}
+
+.country_select {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.join_form select#country {
+    width: 223px;
+    margin-top: 3px;
+}
+
+.join_form input[type="text"]{
+    height: 18px;
+}
+
+.ssa_box p {
+    margin: 9px 0px;
+}
+
+#label_agree {
+    margin-left: 4px;
+}
